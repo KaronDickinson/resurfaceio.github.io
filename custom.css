@@ -1,4 +1,4 @@
 body {
-    background: #254461 url("whale_16x9.jpg") no-repeat center center;
+    background: #254461 url("whale_16x9.jpg") no-repeat center center fixed;
     background-size: cover;
 }
