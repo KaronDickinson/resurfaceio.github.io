@@ -1,4 +1,9 @@
-body {
+.background-default {
     background: #254461 url("whale_16x9.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.background-error {
+    background: #666666 url("whale_grayscale_16x9.jpg") no-repeat center center fixed;
     background-size: cover;
 }
