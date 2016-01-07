@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Resurface.io</title>
     <link rel="stylesheet" href="/css/bootstrap-3.3.6.min.css">
-    <link rel="stylesheet" href="/css/custom.css">
+    <link rel="stylesheet" href="/css/pnotify-3.0.0.min.css">
+    <link rel="stylesheet" href="/css/application.css">
 </head>
 <body class="background-default">
 <div class="container">
@@ -17,5 +18,18 @@
 </div>
 <script src="/js/jquery-1.11.3.min.js"></script>
 <script src="/js/bootstrap-3.3.6.min.js"></script>
+<script src="/js/pnotify-3.0.0.min.js"></script>
+<script src="/js/application.js"></script>
+<script type="text/javascript">
+    $(function () {
+        new PNotify({
+            title: 'Under Construction',
+            text: "Not much to see here yet. We're just getting started!",
+            icon: 'glyphicon glyphicon-alert',
+            addclass: "stack-bottomright",
+            stack: pnotify_stack
+        });
+    });
+</script>
 </body>
 </html>
