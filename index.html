@@ -14,6 +14,8 @@
     <h1 class="margin-bottom-none">resurface.io</h1>
     <p class="lead">Usage Logging for Cloud Apps</p>
     <div class="btn-group">
+        <!--<a class="btn btn-info" href="/about.html" title="About">About</a>-->
+        <!--<a class="btn btn-info" href="/blog.html" title="Check out our blog">Blog</a>-->
         <a class="btn btn-default" href="https://github.com/resurfaceio" title="Follow us on GitHub"><img src="iconsdb_github6_36.png" width="18" height="18"></a>
         <a class="btn btn-default" href="mailto:resurfacelabs@gmail.com" title="Contact by email"><img src="iconsdb_mail_36.png" width="18" height="18"></a>
     </div>
@@ -24,12 +26,15 @@
 <script src="/js/application.js"></script>
 <script type="text/javascript">
     $(function () {
-        new PNotify({
-            title: 'Under Construction',
+        var notice = new PNotify({
+            title: 'Latest update',
             text: "Not much to see here yet. We're just getting started!",
-            icon: 'glyphicon glyphicon-alert',
+             icon: 'glyphicon glyphicon-comment',
             addclass: "stack-bottomright",
             stack: pnotify_stack
+        });
+        notice.get().click(function () {
+            window.location.href = '/blog.html#20160106';
         });
     });
 </script>
