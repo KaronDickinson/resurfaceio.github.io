@@ -5,8 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>resurface.io</title>
-    <link rel="stylesheet" href="/css/bootstrap-3.3.6.min.css">
-    <link rel="stylesheet" href="/css/pnotify-3.0.0.min.css">
+    <link rel="stylesheet" href="/css/bootdarkly-1.0.0.min.css">
     <link rel="stylesheet" href="/css/application.css">
 </head>
 <body class="background-color">
@@ -20,18 +19,16 @@
         <a class="btn btn-default" href="mailto:resurfacelabs@gmail.com" title="Contact by email"><img src="iconsdb_mail_36.png" width="18" height="18"></a>
     </div>
 </div>
-<script src="/js/jquery-1.11.3.min.js"></script>
-<script src="/js/bootstrap-3.3.6.min.js"></script>
-<script src="/js/pnotify-3.0.0.min.js"></script>
-<script src="/js/application.js"></script>
+<script src="/js/bootdarkly-1.0.0.min.js"></script>
 <script type="text/javascript">
     $(function () {
+        PNotify.prototype.options.styling = "bootstrap3";
         var notice = new PNotify({
             title: 'Latest update',
             text: "Not much to see here yet. We're just getting started!",
-             icon: 'glyphicon glyphicon-comment',
+            icon: 'glyphicon glyphicon-comment',
             addclass: "stack-bottomright",
-            stack: pnotify_stack
+            stack: {"dir1": "up", "dir2": "left", "firstpos1": 8, "firstpos2": 8}
         });
         notice.get().click(function () {
             window.location.href = '/blog.html#20160106';
