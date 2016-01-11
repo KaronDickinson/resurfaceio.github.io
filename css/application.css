@@ -1,10 +1,10 @@
 .background-color {
-    background: #254461 url("/whale_16x9.jpg") no-repeat center center fixed;
+    background: #254461 url("/images/whale_16x9.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
 .background-grayscale {
-    background: #666666 url("/whale_grayscale_16x9.jpg") no-repeat center center fixed;
+    background: #666666 url("/images/whale_grayscale_16x9.jpg") no-repeat center center fixed;
     background-size: cover;
 }
 
