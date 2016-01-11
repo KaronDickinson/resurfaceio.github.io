@@ -43,3 +43,7 @@
 .masthead-lead {
     color: #999;
 }
+
+.masthead-logo {
+    border-radius: 10%;
+}
