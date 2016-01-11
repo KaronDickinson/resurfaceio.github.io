@@ -30,7 +30,7 @@
 
 .masthead {
     background: #303030;
-    border-radius: 8px;
+    border-radius: 0 0 12px 12px;
     padding-top: 10px;
     padding-bottom: 0;
     text-align: center;
