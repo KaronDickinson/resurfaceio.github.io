@@ -9,43 +9,49 @@
     <link rel="stylesheet" href="/css/application.css">
     <style>
         .paddedbtn {
-            padding-right: 12px;
-            padding-left: 12px;
+            padding-right: 10px;
+            padding-left: 10px;
         }
     </style>
 </head>
 <body class="background-color">
 <div class="container">
     <h1 class="margin-bottom-none">resurface.io</h1>
-    <p class="lead" style="margin-bottom: 10px;">Usage Logging for Cloud Apps</p>
-    <div class="btn-group hidden-sm hidden-md hidden-lg">
-        <a class="btn btn-primary btn-xs paddedbtn" href="https://github.com/resurfaceio" title="Follow on GitHub"><img src="/images/iconsdb_github6_36.png" width="18" height="18"></a>
-        <a class="btn btn-primary btn-xs paddedbtn" href="https://twitter.com/robfromboulder" title="Follow on Twitter"><img src="/images/iconsdb_twitter_36.png" width="18" height="18"></a>
-        <a class="btn btn-primary btn-xs paddedbtn" href="mailto:resurfacelabs@gmail.com" title="Send email"><img src="/images/iconsdb_mail_36.png" width="18" height="18"></a>
-        <!--<a class="btn btn-info btn-xs paddedbtn" href="/about.html" title="About" style="padding-top: 2px;">About</a>-->
-        <!--<a class="btn btn-info btn-xs paddedbtn" href="/blog.html" title="Blog" style="padding-top: 2px;">Blog</a>-->
-    </div>
+    <p class="lead" style="margin-bottom: 8px;">Usage Logging for Cloud Apps</p>
     <div class="btn-group hidden-xs">
-        <a class="btn btn-primary" href="https://github.com/resurfaceio" title="Follow on GitHub"><img src="/images/iconsdb_github6_48.png" width="24" height="24"></a>
-        <a class="btn btn-primary" href="https://twitter.com/robfromboulder" title="Follow on Twitter"><img src="/images/iconsdb_twitter_48.png" width="24" height="24"></a>
-        <a class="btn btn-primary" href="mailto:resurfacelabs@gmail.com" title="Send email"><img src="/images/iconsdb_mail_48.png" width="24" height="24"></a>
-        <!--<a class="btn btn-info" href="/about.html" title="About" style="padding-top: 12px; padding-bottom: 11px;"><strong>About</strong></a>-->
-        <!--<a class="btn btn-info" href="/blog.html" title="Blog" style="padding-top: 12px; padding-bottom: 11px;"><strong>Blog</strong></a>-->
+        <a class="btn btn-info" href="/blog.html">Blog</a>
+        <a class="btn btn-primary" href="/about.html">About</a>
+        <a class="btn btn-default" href="/license.html">License</a>
+        <a class="btn btn-default" href="/notices.html">Notices</a>
     </div>
+    <div class="btn-group hidden-sm hidden-md hidden-lg">
+        <a class="btn btn-xs btn-info paddedbtn" href="/blog.html">Blog</a>
+        <a class="btn btn-xs btn-primary paddedbtn" href="/about.html">About</a>
+        <a class="btn btn-xs btn-default paddedbtn" href="/license.html">License</a>
+        <a class="btn btn-xs btn-default paddedbtn" href="/notices.html">Notices</a>
+    </div>
+    <nav class="navbar navbar-default navbar-fixed-bottom" style="opacity: 0.8;">
+        <div class="pull-right">
+            <a class="btn btn-primary navbar-btn" href="https://github.com/resurfaceio"><img src="/images/iconsdb_github6_48.png" width="24" height="24"></a>
+            <a class="btn btn-primary navbar-btn" href="https://www.linkedin.com/in/robfromboulder"><img src="/images/iconsdb_linkedin_48.png" width="24" height="24"></a>
+            <a class="btn btn-primary navbar-btn" href="https://twitter.com/robfromboulder"><img src="/images/iconsdb_twitter_48.png" width="24" height="24"></a>
+            <a class="btn btn-primary navbar-btn" href="mailto:resurfacelabs@gmail.com"><img src="/images/iconsdb_mail_48.png" width="24" height="24"></a>
+        </div>
+    </nav>
 </div>
 <script src="/js/bootdarkly-1.0.0.min.js"></script>
 <script type="text/javascript">
     $(function () {
         PNotify.prototype.options.styling = "bootstrap3";
         var notice = new PNotify({
-            title: 'Latest update',
-            text: "Not much to see here yet. We're just getting started!",
+            title: 'Latest blog post',
+            text: "Jan 13 - Starting from scratch, yikes!",
             icon: 'glyphicon glyphicon-comment',
             addclass: "stack-bottomright",
-            stack: {"dir1": "up", "dir2": "left", "firstpos1": 8, "firstpos2": 8}
+            stack: {"dir1": "up", "dir2": "left", "firstpos1": 70, "firstpos2": 10}
         });
         notice.get().click(function () {
-            window.location.href = '/blog.html#20160106';
+            window.location.href = '/blog.html#20160113';
         });
     });
 </script>
