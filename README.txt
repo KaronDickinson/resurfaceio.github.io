@@ -1,1 +1,1 @@
-Copyright 2016 Resurface Labs
+Copyright 2016 Resurface Labs, All Rights Reserved
