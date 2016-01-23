@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/resurfaceio.iml" filepath="$PROJECT_DIR$/.idea/resurfaceio.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/resurfaceio-website.iml" filepath="$PROJECT_DIR$/.idea/resurfaceio-website.iml" />
     </modules>
   </component>
 </project>
