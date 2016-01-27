@@ -43,6 +43,60 @@
         </a>
     </p>
 
+    <a name="20160127"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Yahoo news dataset as anti-pattern</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Yahoo did something honorable last week in releasing their <a target="_blank" href="https://webscope.sandbox.yahoo.com/catalog.php?datatype=r&did=75">R10 Yahoo
+                News Feed dataset</a>, the largest public dataset of its kind ever released. (so went the headlines) At first I was excited that it might provide good patterns
+                to follow. Not so much! &nbsp;
+                <a aria-controls="20160127" href="#20160127details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse">
+                    <span class="glyphicon glyphicon-triangle-bottom"></span>
+                </a>
+            </p>
+            <div class="collapse" id="20160127details">
+                <p class="text-center" style="padding-top: 12px; padding-bottom: 12px;">
+                    <img src="blog_20160127.jpg" width="233" height="233" class="hidden-sm hidden-md hidden-lg">
+                    <img src="blog_20160127.jpg" width="311" height="311" class="hidden-xs">
+                </p>
+                <p>Again, Yahoo deserves praise for doing something admirable here...I think anyway. I can't be sure because Yahoo is restricting access to academic
+                    researchers only. I'm certainly <a target="_blank" href="http://tm.durusau.net/?cat=116">not the only independent researcher</a> to find this restriction
+                    lame, but that's not the sole complaint.</p>
+                <p>Beyond Yahoo's description on their blog, there apparently exists a readme file that provides more technical information, but it's buried in part 1 of this
+                    massive download. Having to download a big tarball just to access a tiny readme file is uncool. If there is a detailed schema of the data, that would be
+                    worth seeing without too much trouble.</p>
+                <p>If technical details aren't forthcoming, at least provide some sample data, which can be totally fake and lawsuit-free. The dataset has to be chunked up
+                    anyway for downloading. Hard to imagine that a few laptop-sized chunks couldn't be carved off safely for use by the general public. Even a few examples in
+                    text might help to see if the dataset is worth exploring.</p>
+                <p>And what about metadata? Starting with metadata about the parts of the download. Let me grab the readme, schema, sample data and metadata in a small
+                    package, and <strong>then</strong> start in on big chunks of data.</p>
+                <p>And why a big download at all? (as opposed to EBS snapshot or the like?)</p>
+                <p>Again, I don't mean impune the fine folks at Yahoo. But I can't help thinking that an archive half the size but twice as open and self-descriptive would
+                    have been better.</p>
+            </div>
+            <p class="byline">Posted Jan 27 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
+    <a name="20160123"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Repost - The Quartz guide to bad data</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                There was a <a target="_blank" href="http://qz.com/572338/the-quartz-guide-to-bad-data/">really great post</a> by the staff at
+                <a target="_blank" href="http://qz.com">Quartz</a> last month that I missed somehow. It details 43 different ways that your dataset could need fixing.
+                Though written from a reporter's perspective, it's a great checklist for anybody working with datasets.
+            </p>
+            <p><a target="_blank" href="https://github.com/Quartz/bad-data-guide">'The Quartz guide to bad data' on GitHub</a></p>
+            <p class="byline">Posted Jan 23 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
     <a name="20160120"></a>
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -63,7 +117,7 @@
                 <p>In my mind, yes. There's no extra cost associated with sharing, especially as GitHub provides public repos for free. I might save somebody a little time. I
                     might have ideas to tweak or customize down the road, making this distribution less generic and more interesting. In a larger sense, this is a precedent
                     for how we intend to participate in the open-source community. Are we contributors, or just lurkers? Let's err toward contributing!</p>
-                <p><a href="https://github.com/resurfaceio/bootdarkly">Bootdarkly on GitHub</a></p>
+                <p><a target="_blank" href="https://github.com/resurfaceio/bootdarkly">Bootdarkly on GitHub</a></p>
             </div>
             <p class="byline">Posted Jan 20 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
