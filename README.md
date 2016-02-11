@@ -1,7 +1,7 @@
 # resurface.io on GitHub Pages
 &copy; 2016 Resurface Labs LLC, All Rights Reserved
 
-## Basic Workflow
+## Git Workflow
 
     git clone git@github.com:resurfaceio/resurfaceio.github.io.git ~/resurfaceio-website
     cd ~/resurfaceio-website
