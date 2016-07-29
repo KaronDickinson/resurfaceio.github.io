@@ -64,6 +64,18 @@ These should load following a redirect:
     http://resurfacelabs.org                  --> http://resurface.io
     http://www.resurfacelabs.org              --> http://resurface.io
 
+    # alternate domain 5
+    http://usagelogger.com                    --> http://resurface.io
+    http://www.usagelogger.com                --> http://resurface.io
+
+    # alternate domain 6
+    http://usageloggers.com                   --> http://resurface.io
+    http://www.usageloggers.com               --> http://resurface.io
+
+    # alternate domain 7
+    http://usagelogging.com                   --> http://resurface.io
+    http://www.usagelogging.com               --> http://resurface.io
+
 These should load our custom 404 page following a redirect:
 
     # default subdomain
@@ -89,6 +101,18 @@ These should load our custom 404 page following a redirect:
     # alternate domain 4
     http://resurfacelabs.org/bleep            --> http://resurface.io/bleep
     http://www.resurfacelabs.org/bleep        --> http://resurface.io/bleep/blorp
+
+    # alternate domain 5
+    http://usagelogger.com/bleep              --> http://resurface.io/bleep
+    http://www.usagelogger.com/bleep          --> http://resurface.io/bleep/blorp
+
+    # alternate domain 6
+    http://usageloggers.com/bleep             --> http://resurface.io/bleep
+    http://www.usageloggers.com/bleep         --> http://resurface.io/bleep/blorp
+
+    # alternate domain 7
+    http://usagelogging.com/bleep             --> http://resurface.io/bleep
+    http://www.usagelogging.com/bleep         --> http://resurface.io/bleep/blorp
 
 ## Image Production
 
@@ -184,7 +208,8 @@ Pixelmator can reduce image size further:
 ### Configure Alternate Domains
 
     log into GoDaddy
-    for: resurfaceio.com, resurfaceio.org, resurfacelabs.com, resurfacelabs.org
+    for: { resurfaceio.com, resurfaceio.org, resurfacelabs.com, resurfacelabs.org,
+           usagelogger.com, usageloggers.com, usagelogging.com }
         set domain and ‘www’ subdomain forwarding like this:
             forward to = http://resurface.io
             redirect type = 301
