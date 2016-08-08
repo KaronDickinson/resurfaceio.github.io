@@ -60,6 +60,127 @@
         </div>
     </div>
 
+    <a name="21060703"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Version 1.5 Released</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Send logging messages to any HTTPS URL that accepts a JSON POST, plus new environment variables to control operations. &nbsp;
+                <a aria-controls="21060703" href="#21060703details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+            </p>
+            <div class="collapse small" id="21060703details">
+                <p>Major changes:<ul>
+                <li>Move from using Singleton instances (via HttpLoggerFactory) to multiple instances (controlled by UsageLoggers)</li>
+                <li>Send data to one or more URLs simultaneously, configuration for filters/middleware takes URL parameter</li>
+                <li>New environment variables to control default URL and global enabled status</li>
+                <li>Tracing API replaced with use of queue/list supplied to logger when instantiated</li>
+                <li>Loggers inspect URL and do not allow themselves to be enabled when misconfigured</li>
+                </ul></p>
+                <p>For all loggers:<ul>
+                <li>HttpLoggerFactory replaced by UsageLoggers</li>
+                <li>BaseLogger.DEFAULT_URL replaced by UsageLoggers.url_by_default</li>
+                <li>UsageLoggers.url_for_demo used in place of "DEMO" literal</li>
+                <li>BaseLogger methods removed: active?, tracing?, tracing_history, tracing_start, tracing_stop</li>
+                </ul></p>
+                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+            </div>
+            <p class="byline">Posted Jul 3 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
+    <a name="20160614"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Version 1.4 Released</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Logging request method and request/response headers, plus some minor refactorings. &nbsp;
+                <a aria-controls="20160614" href="#20160614details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+            </p>
+            <div class="collapse small" id="20160614details">
+                <p>Major changes:<ul>
+                <li>Formatting requests and responses together, rather than as separate messages</li>
+                <li>All attributes are strings, including those known to be numbers</li>
+                <li>Request method & request/response headers are being logged</li>
+                </ul></p>
+                <p>For all loggers:<ul>
+                <li>UsageLogger renamed to BaseLogger</li>
+                <li>BaseLogger.agent is set through constructor</li>
+                <li>BaseLogger.post renamed to BaseLogger.submit</li>
+                <li>HttpLogger.formatEcho/logEcho removed</li>
+                <li>HttpLogger.formatRequest/formatResponse replaced with format()</li>
+                <li>HttpLogger.appendToBuffer added, used by format()</li>
+                <li>HttpLogger.logRequest/logResponse replaced with log()</li>
+                </ul></p>
+                <p>For Java:<ul>
+                <li>BaseLogger.agent() renamed to getAgent()</li>
+                <li>BaseLogger.url() renamed to getUrl()</li>
+                <li>BaseLogger.version() renamed to getVersion()</li>
+                </ul></p>
+                <p>For Ruby:<ul>
+                <li>logger.rb renamed to all.rb</li>
+                </ul></p>
+                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+            </div>
+            <p class="byline">Posted Jun 14 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
+    <a name="20160515"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Version 1.3 Released</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Logging body content from POST requests. &nbsp;
+                <a aria-controls="20160515" href="#20160515details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+            </p>
+            <div class="collapse small" id="20160515details">
+                <p>For Java:<ul>
+                <li>Added HttpLogger.formatRequest(StringBuilder json, long now, HttpServletRequest request, String body)</li>
+                <li>Added HttpLogger.logRequest(HttpServletRequest request, String body), plus overloaded version that sets body to null</li>
+                </ul></p>
+                <p>For Ruby:<ul>
+                <li>Added HttpLogger.format_request(json, now, request, body=nil)</li>
+                <li>Added HttpLogger.log_request(request, body=nil)</li>
+                </ul></p>
+                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+            </div>
+            <p class="byline">Posted May 15 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
+    <a name="20160424"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Version 1.2 Released</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Added request/response implementation classes, for easy mocking and manual use. &nbsp;
+                <a aria-controls="20160424" href="#20160424details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+            </p>
+            <div class="collapse small" id="20160424details">
+                <p>New classes:<ul>
+                <li>For Java: HttpServletRequestImpl, HttpServletResponseImpl</li>
+                <li>For Ruby: HttpRequestImpl, HttpResponseImpl</li>
+                </ul></p>
+                <p>Other changes:<ul>
+                <li>Refactored out UsageLogger abstract base class, which handles enabling/disabling, tracing API methods, and standard constructors for
+                    all usage loggers. UsageLogger provides a DEFAULT_URL constant to use in place of HttpLogger.URL.</li>
+                <li>HttpLogger constant SOURCE has been renamed to AGENT (with abstract accessor method), intended to be populated with the literal
+                    name of the logger source file. (such as 'HttpLogger.java' or 'http_logger.rb')</li>
+                </ul></p>
+                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+            </div>
+            <p class="byline">Posted Apr 24 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
     <a name="20160408"></a>
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -70,9 +191,7 @@
                 When starting this project, I had no idea where this might lead. I was unemployed, hungry to start my own venture, but without product or revenue primed
                 and ready. I'm once again a working stiff with a day job, but this has been too much fun not to keep going. As paying the bills is no longer a concern,
                 we'll be sharing all project source code (warts and all) on <a target="_blank" href="https://github.com/resurfaceio">GitHub</a> moving forward. &nbsp;
-                <a aria-controls="20160408" href="#20160408details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </a>
+                <a aria-controls="20160408" href="#20160408details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
             </p>
             <div class="collapse" id="20160408details">
                 <p>I've always thought that any resurface.io libraries to be bundled with a customer application should be open source. That's what I prefer for
@@ -99,9 +218,7 @@
                 Yahoo did something honorable last week in releasing their <a target="_blank" href="https://webscope.sandbox.yahoo.com/catalog.php?datatype=r&did=75">R10 Yahoo
                 News Feed dataset</a>, the largest public dataset of its kind ever released. (so went the headlines) At first I was excited that it might provide good patterns
                 to follow. Not so much! &nbsp;
-                <a aria-controls="20160127" href="#20160127details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </a>
+                <a aria-controls="20160127" href="#20160127details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
             </p>
             <div class="collapse" id="20160127details">
                 <p class="text-center" style="padding-top: 12px; padding-bottom: 12px;">
@@ -152,9 +269,7 @@
             <p>
                 I love Bootstrap. I love putting together a quick polished UI without having to fight browser quirks. So I reach for Bootstrap, Bootswatch themes, and PNotify
                 (Bootstrap-friendly notifications) whenever possible. As I'm usually using these libraries together, why not treat them as a single unit? &nbsp;
-                <a aria-controls="20160120" href="#20160120details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </a>
+                <a aria-controls="20160120" href="#20160120details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
             </p>
             <div class="collapse" id="20160120details">
                 <p>I'm going to have to maintain this "distribution" whether I choose to give it a name or share it. I'll be upgrading and testing those components together as
@@ -180,9 +295,7 @@
                 great ride. We went from tiny startup (20 people) to part of Quest Software (4k people) to part of Dell (>100k people). I grew to love working as part of an
                 international team, having the freedom to follow my own research, and representing my group at public events. All this conspired to keep the dream of my own
                 business on the back burner...but that couldn't last forever. &nbsp;
-                <a aria-controls="20160113" href="#20160113details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse">
-                    <span class="glyphicon glyphicon-triangle-bottom"></span>
-                </a>
+                <a aria-controls="20160113" href="#20160113details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
             </p>
             <div class="collapse" id="20160113details">
                 <p>Dell is a big company in big transition, and I was laid off (as part of a much larger layoff) in November 2015. It was a bit of a shock initially, but no
