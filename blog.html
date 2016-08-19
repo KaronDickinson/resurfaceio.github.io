@@ -43,6 +43,48 @@
         </a>
     </p>
 
+    <a name="21060818"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Version 1.6 Released</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Automated integration tests for all supported environments, using <a target="_blank" href="https://github.com/jnicklas/capybara">Capybara</a>,
+                <a target="_blank" href="http://phantomjs.org/">PhantomJS</a> and <a target="_blank" href="https://github.com/teampoltergeist/poltergeist">Poltergeist</a>. &nbsp;
+                <a aria-controls="21060703" href="#21060818details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+            </p>
+            <div class="collapse" id="21060818details">
+                <p class="text-center" style="padding-top: 12px; padding-bottom: 12px;">
+                    <img src="blog_20160818.jpg" width="200" height="200" class="hidden-sm hidden-md hidden-lg">
+                    <img src="blog_20160818.jpg" width="300" height="300" class="hidden-xs">
+                </p>
+                <p>From the start we’ve had good automated unit tests, but when it comes to testing with real applications, we’ve been manually following our README instructions for each logger
+                    & environment just like anybody who finds us on GitHub. This has produced good results, but as the number of supported environments has grown, this has become a headache.</p>
+                <p>With this milestone, there is a new set of integration tests (<a target="_blank" href="https://github.com/resurfaceio/resurfaceio-logger-tests">resurfaceio/resurfaceio-logger-tests</a>)
+                    that exercise all loggers. These tests are written in Ruby, and use real live environments (rather than mocks) to try out the latest snapshot build of each logger. It takes ~15
+                    minutes and valid Heroku credentials to run all these tests. Unit tests present in each logger were unchanged.</p>
+                <p>Why standardize on Ruby for integration tests? Because Ruby is a good tool for this job. It's easy to call system commands through backticks, while wrapping those operations
+                    in exception handlers and closures. Using a headless browser that can run JavaScript (Capybara+Poltergeist+PhantomJS) makes it easy to drive test applications. And in the end these
+                    Ruby test fixtures are quite small and readable and easy to maintain.</p>
+                <div class="small"><p>Major changes:<ul>
+                <li>Integration test for Jetty - Java web server, on Ubuntu and OS X</li>
+                <li>Integration test for Rack - Ruby server framework, on Heroku</li>
+                <li>Integration test for Rails - Ruby application framework, on Heroku</li>
+                <li>Integration test for Spark - Java microservice framework, on Heroku</li>
+                <li>Integration test for Tomcat - Java web server, on Ubuntu and OS X</li>
+                </ul></p>
+                <p>For all loggers:<ul>
+                <li>Expect lastn test app to return JSON rather than HTML output</li>
+                <li>Checked and updated legal notices</li>
+                </ul></p>
+                <p>NOTE: 1.x releases are alpha quality and should not be used in production.</p>
+                </div>
+            </div>
+            <p class="byline">Posted Aug 18 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
     <a name="20160721"></a>
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -84,7 +126,7 @@
                 <li>UsageLoggers.url_for_demo used in place of "DEMO" literal</li>
                 <li>BaseLogger methods removed: active?, tracing?, tracing_history, tracing_start, tracing_stop</li>
                 </ul></p>
-                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+                <p>NOTE: 1.x releases are alpha quality and should not be used in production.</p>
             </div>
             <p class="byline">Posted Jul 3 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
@@ -115,15 +157,15 @@
                 <li>HttpLogger.appendToBuffer added, used by format()</li>
                 <li>HttpLogger.logRequest/logResponse replaced with log()</li>
                 </ul></p>
-                <p>For Java:<ul>
+                <p>For Java logger:<ul>
                 <li>BaseLogger.agent() renamed to getAgent()</li>
                 <li>BaseLogger.url() renamed to getUrl()</li>
                 <li>BaseLogger.version() renamed to getVersion()</li>
                 </ul></p>
-                <p>For Ruby:<ul>
+                <p>For Ruby logger:<ul>
                 <li>logger.rb renamed to all.rb</li>
                 </ul></p>
-                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+                <p>NOTE: 1.x releases are alpha quality and should not be used in production.</p>
             </div>
             <p class="byline">Posted Jun 14 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
@@ -140,15 +182,15 @@
                 <a aria-controls="20160515" href="#20160515details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
             </p>
             <div class="collapse small" id="20160515details">
-                <p>For Java:<ul>
+                <p>For Java logger:<ul>
                 <li>Added HttpLogger.formatRequest(StringBuilder json, long now, HttpServletRequest request, String body)</li>
                 <li>Added HttpLogger.logRequest(HttpServletRequest request, String body), plus overloaded version that sets body to null</li>
                 </ul></p>
-                <p>For Ruby:<ul>
+                <p>For Ruby logger:<ul>
                 <li>Added HttpLogger.format_request(json, now, request, body=nil)</li>
                 <li>Added HttpLogger.log_request(request, body=nil)</li>
                 </ul></p>
-                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+                <p>NOTE: 1.x releases are alpha quality and should not be used in production.</p>
             </div>
             <p class="byline">Posted May 15 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
@@ -166,8 +208,8 @@
             </p>
             <div class="collapse small" id="20160424details">
                 <p>New classes:<ul>
-                <li>For Java: HttpServletRequestImpl, HttpServletResponseImpl</li>
-                <li>For Ruby: HttpRequestImpl, HttpResponseImpl</li>
+                <li>For Java logger: HttpServletRequestImpl, HttpServletResponseImpl</li>
+                <li>For Ruby logger: HttpRequestImpl, HttpResponseImpl</li>
                 </ul></p>
                 <p>Other changes:<ul>
                 <li>Refactored out UsageLogger abstract base class, which handles enabling/disabling, tracing API methods, and standard constructors for
@@ -175,7 +217,7 @@
                 <li>HttpLogger constant SOURCE has been renamed to AGENT (with abstract accessor method), intended to be populated with the literal
                     name of the logger source file. (such as 'HttpLogger.java' or 'http_logger.rb')</li>
                 </ul></p>
-                <p>NOTE: 1.x releases are beta quality and should not be used in production.</p>
+                <p>NOTE: 1.x releases are alpha quality and should not be used in production.</p>
             </div>
             <p class="byline">Posted Apr 24 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
@@ -278,7 +320,7 @@
                 <p>In my mind, yes. There's no extra cost associated with sharing, especially as GitHub provides public repos for free. I might save somebody a little time. I
                     might have ideas to tweak or customize down the road, making this distribution less generic and more interesting. In a larger sense, this is a precedent
                     for how we intend to participate in the open-source community. Are we contributors, or just lurkers? Let's err toward contributing!</p>
-                <p><a target="_blank" href="https://github.com/resurfaceio/bootdarkly">Bootdarkly on GitHub</a></p>
+                <p><a target="_blank" href="https://github.com/resurfaceio/bootdarkly">resurfaceio/bootdarkly on GitHub</a></p>
             </div>
             <p class="byline">Posted Jan 20 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
