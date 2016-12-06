@@ -43,6 +43,61 @@
         </a>
     </p>
 
+    <a name="20161206"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Version 1.6.10 Released</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                Sinatra support, plus a number of smaller fixes and improvements. No changes to API compatibility with 1.6.x. &nbsp;
+                <a aria-controls="20161206" href="#20161206details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+            </p>
+            <div class="collapse" id="20161206details">
+                <div class="small"><p>Major changes:<ul>
+                    <li>Testing with Sinatra - Ruby server framework, on Heroku</li>
+                    <li>Testing with international characters</li>
+                    <li>Testing case-sensitivity for key headers</li>
+                    <li>Allow HTTP destination URLs</li>
+                    </ul></p>
+                    <p>For Java logger:<ul>
+                        <li>Fix for servlet filter blocking request parameters</li>
+                        <li>Test for exceptions within servlet filter chain</li>
+                        <li>Tests added for LoggedRequestWrapper</li>
+                        <li>JsonMessage checks for null params</li>
+                    </ul></p>
+                    <p>For Ruby logger:<ul>
+                        <li>Squelch logging 404s from rack middleware</li>
+                        <li>Fix for invalid JSON when testing with Sinatra</li>
+                        <li>Test for exceptions within rack/rails middleware</li>
+                        <li>JsonMessage checks for nil params</li>
+                    </ul></p>
+                    <p>NOTE: 1.x releases are alpha quality and should not be used in production.</p>
+                </div>
+            </div>
+            <p class="byline">Posted Dec 6 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
+    <a name="20161201"></a>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Breaking News - Data scientists don't really enjoy collecting and organizing data!</h3>
+        </div>
+        <div class="panel-body">
+            <p>
+                This
+                <a target="_blank" href="https://whatsthebigdata.com/2016/05/01/data-scientists-spend-most-of-their-time-cleaning-data/">survey</a>
+                claims data preparation accounts for about 80% of the work of data scientists. No shock this is the least enjoyable part of the job!
+            </p>
+            <p>
+                <a target="_blank" href="https://whatsthebigdata.com/2016/05/01/data-scientists-spend-most-of-their-time-cleaning-data/">Data scientists spend most of their time cleaning data</a> &nbsp;
+                <a target="_blank" href="https://www.reddit.com/r/datasets/comments/5f7njk/data_scientists_how_much_effort_do_they_put_into/">(on reddit)</a>
+            </p>
+            <p class="byline">Posted Dec 1 2016 by <a href="/about.html#rob">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
+        </div>
+    </div>
+
     <a name="21060818"></a>
     <div class="panel panel-primary">
         <div class="panel-heading">
@@ -52,7 +107,7 @@
             <p>
                 Automated integration tests for all supported environments, using <a target="_blank" href="https://github.com/jnicklas/capybara">Capybara</a>,
                 <a target="_blank" href="http://phantomjs.org/">PhantomJS</a> and <a target="_blank" href="https://github.com/teampoltergeist/poltergeist">Poltergeist</a>. &nbsp;
-                <a aria-controls="21060703" href="#21060818details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
+                <a aria-controls="21060818" href="#21060818details" class="btn btn-primary btn-xs btn-collapse" role="button" data-toggle="collapse"><span class="glyphicon glyphicon-triangle-bottom"></span></a>
             </p>
             <div class="collapse" id="21060818details">
                 <p class="text-center" style="padding-top: 12px; padding-bottom: 12px;">
