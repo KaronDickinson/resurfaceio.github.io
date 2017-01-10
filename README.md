@@ -1,7 +1,7 @@
 # resurface.io on GitHub Pages
 &copy; 2016-2017 Resurface Labs LLC
 
-## Git Workflow
+## Contributing
 
     git clone git@github.com:resurfaceio/resurfaceio.github.io.git ~/resurfaceio-website
     cd ~/resurfaceio-website
