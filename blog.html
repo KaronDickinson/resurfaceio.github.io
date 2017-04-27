@@ -55,7 +55,7 @@
                 admitting that I'm not a Node.js expert, but that doesn't deter me from trying this out in the open
                 just like everything else this far.
             </p>
-            <p><a target="_blank" href="https://github.com/resurfaceio/resurfaceio-logger-nodejs">resurfaceio-logger-nodejs on GitHub</a></p>
+            <p><a target="_blank" href="https://github.com/resurfaceio/logger-nodejs">resurfaceio/logger-nodejs on GitHub</a></p>
             <p class="byline">Posted Mar 1 2017 by <a href="https://github.com/RobDickinson">Rob<img class="headshot" src="/headshot_rob_128.jpg" width="32" height="32"></a></p>
         </div>
     </div>
@@ -88,9 +88,9 @@
         <div class="panel-body">
             <p>
                 This short video shows configuring a
-                <a target="_blank" href="https://github.com/resurfaceio/resurfaceio-logger-ruby">Ruby logger</a>
+                <a target="_blank" href="https://github.com/resurfaceio/logger-ruby">Ruby logger</a>
                 (for applications using rack, rails, or sinatra) that sends data to a private listener
-                (our <a target="_blank" href="https://github.com/resurfaceio/resurfaceio-lastn">lastn app</a>).
+                (our <a target="_blank" href="https://github.com/resurfaceio/lastn">lastn app</a>).
                 Heroku is used as the cloud platform. Karon says I sound like I'm channeling Bob Ross, which
                 I completely take as a compliment.
             </p>
@@ -109,9 +109,9 @@
         <div class="panel-body">
             <p>
                 This short video shows configuring a
-                <a target="_blank" href="https://github.com/resurfaceio/resurfaceio-logger-java">Java logger</a>
+                <a target="_blank" href="https://github.com/resurfaceio/logger-java">Java logger</a>
                 (for applications using Spark framework or servlet container) that sends data to a private listener
-                (our <a target="_blank" href="https://github.com/resurfaceio/resurfaceio-lastn">lastn app</a>).
+                (our <a target="_blank" href="https://github.com/resurfaceio/lastn">lastn app</a>).
                 Heroku is used as the cloud platform.
                 I'm no Martin Scorsese, but I think this turned out pretty well for a first demo.
             </p>
@@ -192,7 +192,7 @@
                 </p>
                 <p>From the start we’ve had good automated unit tests, but when it comes to testing with real applications, we’ve been manually following our README instructions for each logger
                     & environment just like anybody who finds us on GitHub. This has produced good results, but as the number of supported environments has grown, this has become a headache.</p>
-                <p>With this milestone, there is a new set of integration tests (<a target="_blank" href="https://github.com/resurfaceio/resurfaceio-logger-tests">resurfaceio/resurfaceio-logger-tests</a>)
+                <p>With this milestone, there is a new set of integration tests (<a target="_blank" href="https://github.com/resurfaceio/logger-tests">resurfaceio/logger-tests</a>)
                     that exercise all loggers. These tests are written in Ruby, and use real live environments (rather than mocks) to try out the latest snapshot build of each logger. It takes ~15
                     minutes and valid Heroku credentials to run all these tests. Unit tests present in each logger were unchanged.</p>
                 <p>Why standardize on Ruby for integration tests? Because Ruby is a good tool for this job. It's easy to call system commands through backticks, while wrapping those operations
